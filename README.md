@@ -60,3 +60,14 @@ Actions:
 - monitor -> Monitor tor relay with nyx
 
 ```
+
+
+### Extra
+For more security, use Firefox!
+Here are some useful add-ons for Firefox:
+```shell
+- Profile Manager  -> https://addons.mozilla.org/en-US/firefox/addon/chameleon-ext
+- NoScript         -> https://addons.mozilla.org/en-US/firefox/addon/noscript/
+- UBlock           -> https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
+- HTTPS everywhere -> https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/
+```
