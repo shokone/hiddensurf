@@ -3,7 +3,7 @@
 # Script to Surf the Internet Anonymously
 # 
 # Description:
-# Implementing Tor, I2P, Privoxy, Arm-Tor and MacChanger
+# Implementing Tor, I2P, Privoxy and MacChanger
 # for a simple and better privacy and security
 #
 # Author: Shokone
