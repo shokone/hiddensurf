@@ -29,7 +29,7 @@ root_check() {
 ## Check config file
 config_check() {
 	# Check if config file exists
-	[ ! -f "${CONFIG_FILE}" ] && echo -e "[${RED}ERROR${RESETCOLOR}] Config file /etc/default/hiddensurf.conf not exists." && exit 1
+	[ ! -f "${CONFIG_FILE}" ] && echo -e "[${RED}ERROR${RESETCOLOR}] Config file ${CONFIG_FILE} not exists." && exit 1
 	# And load it
 	. "${CONFIG_FILE}"
 }
