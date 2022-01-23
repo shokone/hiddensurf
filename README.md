@@ -1,7 +1,7 @@
 # hiddensurf
 
 HiddenSurf is a script that will allow users to spoof their MAC address, change their hostname and transparently route traffic through Tor (The Onion Router) to provide simple and better user privacy and security. 
-
+Include macchanger, hostname and wipe (Cleans ram/cache & swap-space) features.
 
 ### Requirements
 Script requirements are:
