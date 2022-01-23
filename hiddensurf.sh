@@ -3,7 +3,7 @@
 # Script to Surf the Internet Anonymously
 # 
 # Description:
-# Implementing Tor, I2P, Privoxy and MacChanger
+# Implementing Tor, I2P, Privoxy, tor-nyx and MacChanger
 # for a simple and better privacy and security
 #
 # Author: Shokone
@@ -42,15 +42,16 @@ usage() {
 	echo ""
 	echo "Usage: ${NAME} [action] [Optional [service]]"
 	echo "Actions: "
-	echo "- start  -> If not specify a service, by default start tor tunneling."
-	echo "            Available services: tor privoxy i2p"
-	echo "- stop   -> If not specify a service, by default stop all services."
-	echo "            Available services: tor privoxy i2p"
-	echo "- status -> Show status of all services."
-	echo "- change -> If not specify a service, by default change tor relay."
-	echo "            Available services: tor mac hostname"
-	echo "- wipe   -> Wipe Cache, RAM and swap"
-	echo "- update -> Download last version from github."
+	echo "- start   -> If not specify a service, by default start tor tunneling."
+	echo "             Available services: tor privoxy i2p"
+	echo "- stop    -> If not specify a service, by default stop all services."
+	echo "             Available services: tor privoxy i2p"
+	echo "- status  -> Show status of all services."
+	echo "- change  -> If not specify a service, by default change tor relay."
+	echo "             Available services: tor mac hostname"
+	echo "- wipe    -> Wipe Cache, RAM and swap"
+	echo "- update  -> Download last version from github."
+	echo "- monitor -> Monitor tor relay with nyx"
 	echo ""
 	exit 0
 }
@@ -521,6 +522,11 @@ case "$1" in
 			root_check
 			config_check
 			update
+			;;
+	monitor)
+			root_check
+			config_check
+			nyx
 			;;
 	*)
 			usage && exit 0

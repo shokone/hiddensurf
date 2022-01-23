@@ -19,7 +19,7 @@ DATE="$(date '+%Y%m%d%H%M')"
 echo -e "[INFO] This script will install HiddenSurf on your computer..."
 
 echo "[INFO] Installing packages..."
-apt-get install tor macchanger resolvconf dnsmasq privoxy tor-arm libnotify-bin curl bleachbit i2pd jq
+apt-get install tor macchanger resolvconf dnsmasq privoxy tor-arm libnotify-bin curl bleachbit i2pd jq nyx
 echo -e "[${GREEN}SUCCESS${RESETCOLOR}] Packages installed."
 
 
