@@ -1,0 +1,50 @@
+
+# General
+VirtualAddrNetwork 10.192.0.0/10
+
+# Define a non-standard ports 
+# to avoid conflicts with other tor instances
+TransPort 127.0.0.1:9040 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
+SocksPort 127.0.0.1:9050 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
+DNSPort 127.0.0.1:53
+AutomapHostsOnResolve 1
+AutomapHostsSuffixes .exit,.onion
+
+
+# Daemonize
+RunAsDaemon 1
+
+# Sandbox
+Sandbox 1
+
+
+# Use hardware acceleration when possible for crypto
+HardwareAccel 1
+
+
+# Custom safety hacks
+
+# Sockets
+TestSocks 1
+WarnUnsafeSocks 1
+AllowNonRFC953Hostnames 0
+AllowDotExit 0
+WarnPlaintextPorts 23,109,110,143,80
+
+# DNS
+ClientRejectInternalAddresses 1
+
+# Circuits
+NewCircuitPeriod 40
+MaxCircuitDirtiness 600
+MaxClientCircuitsPending 48
+UseEntryGuards 1
+UseEntryGuardsAsDirGuards 1
+EnforceDistinctSubnets 1
+
+
+# Host and node config
+TrackHostExits .facebook.com,.facebook.net,.twitter.com,.fbcdn.com,.fbcdn.net,.akamaihd.com,.google.com,.google.it,.google.fr,.google.de,.google.br,.google.es,.yandex.ru,.yandex.com,.gmail.com,.googleapis.com,.gstatic.com,.adform.net,.google-analitics.com,.googletagservices.com
+ExcludeNodes {US},{FR},{UK},{GB},{ES}
+ExitNodes 217.115.10.132,217.115.10.131,{kp},{af},{dz},{cu},{gm},{ht},{is},{mr},{ng},{ru},{vn},{so}
+StrictNodes 1
