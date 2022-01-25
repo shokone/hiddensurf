@@ -44,7 +44,7 @@ chmod +x install.sh
 
 ```shell
 $ hiddensurf help
-hiddensurf v1.0 by Shokone
+hiddensurf v1.1 by Shokone
 
 Usage: hiddensurf [action] [Optional [service]]
 Actions: 

@@ -7,12 +7,12 @@
 # for a simple and better privacy and security
 #
 # Author: Shokone
-# Version: 1.0
+# Version: 1.1
 # 
 
 # Declare basic vars
 NAME=$(basename "${0}" .sh)
-VERSION="1.0"
+VERSION="1.1"
 AUTHOR="Shokone"
 CONFIG_FILE="/etc/default/hiddensurf.conf"
 GREEN='\033[1;92m'

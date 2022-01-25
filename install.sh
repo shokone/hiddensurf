@@ -4,7 +4,7 @@
 # 
 #
 # Author: 
-# Version: 1.0
+# Version: 1.1
 # 
 
 set -o errexit
@@ -33,11 +33,12 @@ echo -e "[${GREEN}SUCCESS${RESETCOLOR}] Backups completed."
 
 # copy custom config files
 echo "[INFO] Copying config files..."
-cp -f "conf/hiddensurf.conf" "/etc/default/hiddensurf.conf"
-cp -f "hiddensurf.sh" "/etc/init.d/hiddensurf.sh"
-cp -f "hiddensurf" "/usr/bin/hiddensurf"
-cp -f "conf/privoxy.conf" "/etc/privoxy/config"
-cp -f "conf/torrc" "/etc/tor/torrc"
+[ -d "/tmp/hiddensurf" ] && repopath="/tmp/hiddensurf/" || repopath=""
+cp -f "${repopath}conf/hiddensurf.conf" "/etc/default/hiddensurf.conf"
+cp -f "${repopath}hiddensurf.sh" "/etc/init.d/hiddensurf.sh"
+cp -f "${repopath}hiddensurf" "/usr/bin/hiddensurf"
+cp -f "${repopath}conf/privoxy.conf" "/etc/privoxy/config"
+cp -f "${repopath}conf/torrc" "/etc/tor/torrc"
 echo -e "[${GREEN}SUCCESS${RESETCOLOR}] Config files copied."
 
 
